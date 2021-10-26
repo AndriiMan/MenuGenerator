@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MenuPage</title>
+</head>
+<body>
+
+<div th:if="${ not#lists.isEmpty(dayPeriods)}">
+
+    <table>
+        <thead>
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Calories</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="period : ${dayPeriods}">
+            <td th:text="${period.id}"></td>
+            <td th:text="${period.name}"></td>
+            <td th:text="${period.calories}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

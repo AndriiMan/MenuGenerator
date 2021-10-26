@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddMenuPage</title>
+</head>
+<body>
+
+<div>
+    <form action="/addMenu" method="post">
+        <input th:type="text" name="name">
+        <input th:type="number" name="calories">
+        <button type="submit">Add all data</button>
+    </form>
+</div>
+</body>
+</html>
